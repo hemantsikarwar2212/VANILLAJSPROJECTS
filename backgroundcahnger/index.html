@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background changer</title>
+    <style>
+        body{
+            background-color: green;
+        }
+    </style>
+</head>
+<body >
+    <h1>background color changer on click </h1>
+    <button >click me  <img height="20"  src="images/cursoricon.webp" alt="" srcset=""></button>
+</body>
+<script>
+document.addEventListener('click' ,function(e){
+    document.querySelector('body').style.backgroundColor = 'red'
+    document.querySelector('h1').style.color = 'white' 
+})
+const changeText = function(e){
+    document.querySelector('h1').innerHTML = 'background is changed ' 
+}
+const changed = setTimeout(changeText ,5000)
+document.querySelector('button').addEventListener('click',function(e){
+    clearTimeout(changed)
+})
+</script>
+</html>
